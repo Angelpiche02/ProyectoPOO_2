@@ -8,5 +8,16 @@ public class Elemento
     private String descripcion;
     private String nivelPrioridad;
 
+    public Elemento() {}
+    public Elemento(int id, String titulo , TipoElemento tipo, String descripcion, String nivelPrioridad)
+    {
+        this.id = id;
+        this.titulo = titulo;
+        this.tipo = tipo;
+        this.descripcion = descripcion;
+        this.nivelPrioridad = nivelPrioridad;
+    }
+
+
 
 }
