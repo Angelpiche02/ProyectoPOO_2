@@ -33,6 +33,13 @@ public class Recordatorio extends Elemento {
         return recordatorios;
     }
 
+    @Override
+    public void mostrarElemento() {
+        super.mostrarElemento();
+        System.out.println("Fecha: " + this.fecha); // Asegúrate que la variable se llame 'estado'
+        System.out.println("---------------------------");
+
+    }
     public static void mostrarRecordatorios()
     {
         List<Elemento> recordatorios = obtenerRecordatorios();

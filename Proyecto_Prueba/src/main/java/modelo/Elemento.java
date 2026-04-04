@@ -60,9 +60,13 @@ public class Elemento
         System.out.println("Elemento no encontrado");
     }
 
-
-
-
-
+    // Metodo para mostrar los datos base de cualquier elemento
+    public void mostrarElemento() {
+        System.out.println("ID: " + id);
+        System.out.println("Titulo: " + titulo);
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Descripcion: " + descripcion);
+        System.out.println("Prioridad: " + nivelPrioridad);
+    }
 
 }

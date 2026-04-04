@@ -36,6 +36,13 @@ public class Tarea extends Elemento
         return tareas;
     }
 
+    @Override
+    public void mostrarElemento() {
+        super.mostrarElemento();
+        System.out.println("Estado: " + this.estado); // Asegúrate que la variable se llame 'estado'
+        System.out.println("---------------------------");
+    }
+
     public static void mostrarTareas()
     {
         List<Elemento> tareas = obtenerTareas();
