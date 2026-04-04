@@ -22,6 +22,20 @@ public class Tarea extends Elemento
     public String getEstado(){return this.estado;}
     public String getCategoria(){return this.categoria;}
 
+    public static List<Elemento> obtenerTareas()
+    {
+        List<Elemento> tareas = new ArrayList<>();
+
+        for (Elemento e : Elemento.elementos)
+        {
+            if (e.getTipo() == TipoElemento.TAREA)
+            {
+                tareas.add(e);
+            }
+        }
+        return tareas;
+    }
+
 
 
 
