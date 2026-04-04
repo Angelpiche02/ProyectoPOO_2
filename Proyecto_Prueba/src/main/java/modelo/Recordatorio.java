@@ -33,6 +33,24 @@ public class Recordatorio extends Elemento {
         return recordatorios;
     }
 
+    public static void mostrarRecordatorios()
+    {
+        List<Elemento> recordatorios = obtenerRecordatorios();
+
+        System.out.println("\n--- LISTA DE RECORDATORIOS ---");
+
+        for (Elemento e : recordatorios)
+        {
+            e.mostrarElemento();
+        }
+    }
+
+
+
+
+
+
+
 
 
 
