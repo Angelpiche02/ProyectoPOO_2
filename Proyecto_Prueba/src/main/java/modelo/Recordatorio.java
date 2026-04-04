@@ -15,7 +15,24 @@ public class Recordatorio extends Elemento {
         this.fecha = fecha;
     }
 
-    
+    public String getFecha(){return this.fecha;}
+    public void setFecha(String fecha){this.fecha = fecha;}
+
+    public static List<Elemento> obtenerRecordatorios()
+    {
+        List<Elemento> recordatorios = new ArrayList<>();
+
+        for (Elemento e : Elemento.elementos)
+        {
+            if (e.getTipo() == TipoElemento.RECORDATORIO)
+            {
+                recordatorios.add(e);
+            }
+        }
+
+        return recordatorios;
+    }
+
 
 
 
