@@ -16,5 +16,15 @@ public class Tarea extends Elemento
         this.categoria = categoria;
     }
 
+    public void setEstado(String estado){this.estado = estado;}
+    public void setCategoria(String categoria){this.categoria = categoria;}
+
+
+
+
+
+
+
+
 
 }
