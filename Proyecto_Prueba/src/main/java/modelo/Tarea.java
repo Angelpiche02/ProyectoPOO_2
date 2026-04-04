@@ -36,6 +36,19 @@ public class Tarea extends Elemento
         return tareas;
     }
 
+    public static void mostrarTareas()
+    {
+        List<Elemento> tareas = obtenerTareas();
+
+        System.out.println("\n--- LISTA DE TAREAS ---");
+
+        for (Elemento e : tareas)
+        {
+            e.mostrarElemento();
+        }
+    }
+
+
 
 
 
