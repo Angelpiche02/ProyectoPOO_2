@@ -8,6 +8,9 @@ public class Elemento
     private String descripcion;
     private String nivelPrioridad;
 
+    public static List<Elemento> elementos = new ArrayList<>();
+
+
     public Elemento() {}
     public Elemento(int id, String titulo , TipoElemento tipo, String descripcion, String nivelPrioridad)
     {
@@ -29,6 +32,14 @@ public class Elemento
     public TipoElemento getTipo(){return tipo;}
     public String getDescripcion(){return descripcion;}
     public String getNivelPrioridad(){return nivelPrioridad;}
+
+    public static void guardarElemento(Elemento e)
+    {
+        elementos.add(e);
+        System.out.println("Elemento creado con exito");
+
+    }
+
 
 
 
