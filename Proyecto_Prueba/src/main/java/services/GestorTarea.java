@@ -34,4 +34,9 @@ public class GestorTarea
         }
     }
 
+    public int getCantidadTareas()
+    {
+        return tareas.size();
+    }
+
 }
