@@ -13,7 +13,6 @@ public class Usuario {
         this.contrasena = contrasena;
         this.membresia = membresia;
     }
-
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
