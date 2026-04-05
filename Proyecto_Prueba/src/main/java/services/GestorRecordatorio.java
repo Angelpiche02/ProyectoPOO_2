@@ -33,4 +33,38 @@ public class GestorRecordatorio
         }
     }
 
+    // Borrar recordatorio por título
+    public void borrarRecordatorio(String tituloABorrar) {
+
+        if (recordatorios.isEmpty()) {
+            System.out.println("La lista está vacía, nada que borrar.");
+            return;
+        }
+
+        Recordatorio recordatorioAEliminar = null;
+        boolean encontrado = false;
+
+        // Convertimos el título de búsqueda a minúsculas
+        String tituloBusqueda = tituloABorrar.toLowerCase();
+
+        for (Recordatorio r : recordatorios) {
+            if (r.getTitulo() != null) {
+                String tituloActual = r.getTitulo().toLowerCase();
+
+                if (tituloActual.equals(tituloBusqueda)) {
+                    recordatorioAEliminar = r;
+                    encontrado = true;
+                    break;
+                }
+            }
+        }
+
+        if (encontrado && recordatorioAEliminar != null) {
+            recordatorios.remove(recordatorioAEliminar);
+            System.out.println("Recordatorio '" + tituloABorrar + "' eliminado.");
+        } else {
+            System.out.println("No se encontró el recordatorio: " + tituloABorrar);
+        }
+    }
+
 }
