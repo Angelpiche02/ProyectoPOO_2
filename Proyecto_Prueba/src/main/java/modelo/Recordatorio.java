@@ -40,6 +40,7 @@ public class Recordatorio extends Elemento {
         System.out.println("---------------------------");
 
     }
+
     public static void mostrarRecordatorios()
     {
         List<Elemento> recordatorios = obtenerRecordatorios();
