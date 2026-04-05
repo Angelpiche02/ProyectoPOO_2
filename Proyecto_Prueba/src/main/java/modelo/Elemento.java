@@ -69,4 +69,6 @@ public class Elemento
         System.out.println("Prioridad: " + nivelPrioridad);
     }
 
+    // Metodo para
+
 }
