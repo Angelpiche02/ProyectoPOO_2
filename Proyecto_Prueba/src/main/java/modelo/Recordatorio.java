@@ -52,8 +52,10 @@ public class Recordatorio extends Elemento {
         }
     }
 
+    //metodo borrar recordatorio donde recorre la lista y verifica si hay o no elementos
     public static void borrarRecordatorio(java.util.List<Elemento> lista, String tituloABorrar) {
-        // 1. Verificamos que la lista no esté vacía
+
+
         if (lista == null || lista.isEmpty()) {
             System.out.println("La lista está vacía, nada que borrar.");
             return;
@@ -67,7 +69,7 @@ public class Recordatorio extends Elemento {
             Elemento e = it.next();
             // 3. Si es un Recordatorio y el título coincide (ignorando mayúsculas)
             if (e instanceof Recordatorio && e.getTitulo().equalsIgnoreCase(tituloABorrar)) {
-                it.remove(); // ¡Borrado!
+                it.remove();
                 encontrado = true;
                 System.out.println("Recordatorio '" + tituloABorrar + "' eliminado.");
                 break;

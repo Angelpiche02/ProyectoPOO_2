@@ -57,7 +57,7 @@ public class Tarea extends Elemento
 
     public static void buscarTarea(java.util.List<Elemento> lista, String textoABuscar) {
 
-        // 1. Validacion de lista vacia o nula
+        // 1. Validacion de lista vacia
         if (lista == null || lista.isEmpty()) {
             System.out.println("No hay tareas registradas para realizar la busqueda.");
             return;
@@ -67,7 +67,7 @@ public class Tarea extends Elemento
         boolean encontrada = false;
 
         for (Elemento e : lista) {
-            // 2. Verificamos que sea una Tarea (Polimorfismo)
+            // 2. Verificamos que sea una Tarea
             if (e instanceof Tarea) {
                 Tarea t = (Tarea) e;
 
@@ -76,9 +76,8 @@ public class Tarea extends Elemento
                 // .contains() permite encontrar "Parcial de POO" buscando solo "POO"
                 if (t.getTitulo().toLowerCase().contains(textoABuscar.toLowerCase())) {
                     System.out.println("¡Coincidencia encontrada!");
-                    t.mostrarElemento(); // Punto 6 de tu guia
+                    t.mostrarElemento();
                     encontrada = true;
-                    // No ponemos 'break' por si hay varias tareas que contienen la misma palabra
                 }
             }
         }
