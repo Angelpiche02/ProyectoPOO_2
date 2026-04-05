@@ -79,4 +79,20 @@ public class Recordatorio extends Elemento {
         }
     }
 
+    // Atributo nuevo para saber si la alerta esta encendida
+    private boolean alertaActiva = false;
+
+    //metodo activarAlerta
+    public void activarAlerta() {
+        this.alertaActiva = true;
+        System.out.println("!!! ALERTA ACTIVADA !!!");
+        System.out.println("Recordatorio: " + this.getTitulo());
+        System.out.println("Estado: Pendiente de revision.");
+    }
+
+    // Getter para consultar el estado de la alerta
+    public boolean isAlertaActiva() {
+        return alertaActiva;
+    }
+
 }
