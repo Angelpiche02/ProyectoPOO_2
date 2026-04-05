@@ -9,7 +9,7 @@ public class UsuarioClasico extends Usuario
     @Override
     public void crearTarea(Tarea t)
     {
-        if(gestorTarea.getCantidadTareas >= 5)
+        if(gestorTarea.getCantidadTareas()>= 5)
         {
             System.out.println("Alcazaste el limite de tareas");
         }else
