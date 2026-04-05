@@ -28,3 +28,4 @@ public class Usuario {
     public boolean isMembresia() { return membresia; }
     public void setMembresia(boolean membresia) { this.membresia = membresia; }
 }
+}
