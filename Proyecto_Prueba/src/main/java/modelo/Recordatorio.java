@@ -52,15 +52,31 @@ public class Recordatorio extends Elemento {
         }
     }
 
+    public static void borrarRecordatorio(java.util.List<Elemento> lista, String tituloABorrar) {
+        // 1. Verificamos que la lista no esté vacía
+        if (lista == null || lista.isEmpty()) {
+            System.out.println("La lista está vacía, nada que borrar.");
+            return;
+        }
 
+        // 2. Usamos un Iterator para buscar y borrar
+        java.util.Iterator<Elemento> it = lista.iterator();
+        boolean encontrado = false;
 
+        while (it.hasNext()) {
+            Elemento e = it.next();
+            // 3. Si es un Recordatorio y el título coincide (ignorando mayúsculas)
+            if (e instanceof Recordatorio && e.getTitulo().equalsIgnoreCase(tituloABorrar)) {
+                it.remove(); // ¡Borrado!
+                encontrado = true;
+                System.out.println("Recordatorio '" + tituloABorrar + "' eliminado.");
+                break;
+            }
+        }
 
-
-
-
-
-
-
-
+        if (!encontrado) {
+            System.out.println("No se encontró el recordatorio: " + tituloABorrar);
+        }
+    }
 
 }

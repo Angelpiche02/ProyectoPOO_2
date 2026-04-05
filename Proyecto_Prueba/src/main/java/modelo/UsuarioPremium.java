@@ -17,6 +17,7 @@ public class UsuarioPremium {
         return this.listaElementos;
     }
 
+
     // Constructor que inicializa el nombre y la lista de elementos como un ArrayList vacio
     public UsuarioPremium(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
@@ -24,9 +25,9 @@ public class UsuarioPremium {
     }
 
     // Metodo para agregar tareas sin restricciones de limite
-    public void crearTareaIlimitada(Tarea nuevaTarea) {
-        this.listaElementos.add(nuevaTarea);
-        System.out.println("Tarea '" + nuevaTarea.getTitulo() + "' creada.");
+    public void crearTareaIlimitada(Elemento nuevoElemento) {
+        this.listaElementos.add(nuevoElemento);
+        System.out.println("Elemento '" + nuevoElemento.getTitulo() + "' agregado.");
     }
 
     // Metodo que permite compartir una tarea con multiples usuarios usando una lista de correos
