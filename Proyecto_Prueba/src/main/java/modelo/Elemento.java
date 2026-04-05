@@ -17,7 +17,7 @@ public abstract class Elemento {
         this.descripcion = descripcion;
         this.nivelPrioridad = nivelPrioridad;
     }
-    
+
 
     public int getId() {return id;}
     public String getTitulo() {return titulo;}
