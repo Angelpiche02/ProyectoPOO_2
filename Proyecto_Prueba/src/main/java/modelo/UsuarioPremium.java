@@ -13,6 +13,10 @@ public class UsuarioPremium {
     private String nombreUsuario;
     private List<Elemento> listaElementos; // Lista polimorfica que guarda Tareas y Recordatorios
 
+    public List<Elemento> getListaElementos() {
+        return this.listaElementos;
+    }
+
     // Constructor que inicializa el nombre y la lista de elementos como un ArrayList vacio
     public UsuarioPremium(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
