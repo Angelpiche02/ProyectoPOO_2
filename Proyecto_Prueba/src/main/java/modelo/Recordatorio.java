@@ -1,7 +1,5 @@
 package modelo;
-import java.time.LocalDate;
-
-public class Recordatorio extends Elemento {
+import java.time.LoRecordatorio extends Elemento {
 
     private LocalDate fecha;
     private boolean alertaActiva = false;
