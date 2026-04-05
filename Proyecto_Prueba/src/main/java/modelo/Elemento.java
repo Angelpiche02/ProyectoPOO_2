@@ -1,3 +1,4 @@
+package modelo;
 import modelo.TipoElemento;
 
 public abstract class Elemento {
