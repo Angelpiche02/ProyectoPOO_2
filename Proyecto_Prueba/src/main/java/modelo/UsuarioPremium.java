@@ -1,28 +1,15 @@
 package modelo;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class UsuarioPremium {
-
-    private String nombreUsuario;
-    private List<Elemento> listaElementos;
-
-    public UsuarioPremium(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-        this.listaElementos = new ArrayList<>();
+public class UsuarioPremium extends Usuario
+{
+    public UsuarioPremium(int id, String nombre, String correo, String contrasena, boolean membresia) {
+        super(id, nombre, correo, contrasena, membresia);
     }
 
-    public List<Elemento> getListaElementos() {
-        return listaElementos;
-    }
-    public void agregarElemento(Elemento elemento) {
-        listaElementos.add(elemento);
-    }
-
-
-    public void mostrarPerfil() {
-        System.out.println("=== USUARIO: " + nombreUsuario.toUpperCase() + " ===");
-        listaElementos.forEach(Elemento::mostrarElemento);
+    @Override
+    public void crearTarea(Tarea t)
+    {
+        // Sin límite, simplemente agregamos la tarea
+        gestorTarea.agregarTarea(t);
     }
 }
