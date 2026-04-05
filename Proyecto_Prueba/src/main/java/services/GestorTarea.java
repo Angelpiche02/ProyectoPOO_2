@@ -38,4 +38,34 @@ public class GestorTarea
         return tareas.size();
     }
 
+    // Buscar por título
+    public void buscarTarea(String texto) {
+
+        if (tareas.isEmpty()) {
+            System.out.println("No hay tareas para buscar.");
+            return;
+        }
+
+        boolean encontrada = false;
+
+        System.out.println("\nBuscando: " + texto);
+
+        for (Tarea t : tareas) {
+
+            if (t.getTitulo() != null &&
+                    t.getTitulo().toLowerCase().contains(texto.toLowerCase())) {
+
+                System.out.println("¡Tarea encontrada!");
+                t.mostrarElemento();
+                encontrada = true;
+            }
+        }
+
+        if (!encontrada) {
+            System.out.println("No se encontró ninguna tarea.");
+        }
+    }
+
 }
+
+
