@@ -20,12 +20,6 @@ public class Recordatorio extends Elemento {
 
     public boolean isAlertaActiva() { return alertaActiva; }
 
-    public void activarAlerta() {
-        this.alertaActiva = true;
-        System.out.println("!!! ALERTA ACTIVADA !!!");
-        System.out.println("Recordatorio: " + this.getTitulo());
-        System.out.println("Estado: Pendiente de revisión.");
-    }
 
     @Override
     public void mostrarElemento() {
