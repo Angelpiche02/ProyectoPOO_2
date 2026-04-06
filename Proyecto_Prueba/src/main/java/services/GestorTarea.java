@@ -13,8 +13,16 @@ public class GestorTarea
     }
 
     // Agregar tarea
-    public void agregarTarea(Tarea t) {
-        tareas.add(t);
+    public void agregarTarea(Tarea nueva) {
+
+        for (Tarea t : tareas) {
+            if (t.verificarDuplicados(nueva)) {
+                System.out.println("Tarea duplicada");
+                return;
+            }
+        }
+
+        tareas.add(nueva);
         System.out.println("Tarea agregada con éxito");
     }
 

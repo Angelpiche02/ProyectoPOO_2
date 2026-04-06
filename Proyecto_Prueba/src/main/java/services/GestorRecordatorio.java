@@ -13,9 +13,17 @@ public class GestorRecordatorio
     }
 
     // Agregar recordatorio
-    public void agregarRecordatorio(Recordatorio r) {
-        recordatorios.add(r);
-        System.out.println("Recordatorio agregado con éxito");
+    public void agregarRecordatorio(Recordatorio nuevo) {
+
+        for (Recordatorio r : recordatorios) {
+            if (r.verificarDuplicados(nuevo)) {
+                System.out.println("Recordatorio duplicado");
+                return;
+            }
+        }
+
+        recordatorios.add(nuevo);
+        System.out.println("Recordatorio agregado con exito");
     }
 
     // Mostrar todos los recordatorios

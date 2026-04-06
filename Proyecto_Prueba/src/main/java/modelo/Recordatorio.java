@@ -28,4 +28,15 @@ public class Recordatorio extends Elemento {
         System.out.println("Alerta activa: " + alertaActiva);
         System.out.println("---------------------------");
     }
+
+    @Override
+    public boolean verificarDuplicados(Elemento e) {
+        if (e instanceof Recordatorio) {
+            Recordatorio r = (Recordatorio) e;
+
+            return this.titulo.equalsIgnoreCase(r.titulo) &&
+                    this.fecha.equals(r.fecha);
+        }
+        return false;
+    }
 }

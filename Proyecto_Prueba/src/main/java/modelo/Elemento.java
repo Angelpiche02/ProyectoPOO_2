@@ -42,8 +42,9 @@ public abstract class Elemento {
         System.out.println("Prioridad: " + nivelPrioridad);
     }
 
-
-    // Metodo para verificar duplicidad
+    // Este método recibe otro elemento para comparar
+    public abstract boolean verificarDuplicados(Elemento e);
+}
 
 
 }
