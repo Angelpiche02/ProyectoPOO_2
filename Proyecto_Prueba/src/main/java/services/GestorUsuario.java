@@ -38,7 +38,7 @@ public class GestorUsuario
             if(u.getCorreo().equals(correo))
             {
                 u.setContrasena(nuevaContrasena);
-                System.out.println("Cambio de contraseña exitoso");
+                System.out.println("Cambio de contrasena exitoso");
                 return;
             }
 

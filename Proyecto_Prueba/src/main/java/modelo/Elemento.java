@@ -24,7 +24,7 @@ public abstract class Elemento {
 
     public void setTitulo(String titulo) {this.titulo = titulo;}
     public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
-    public Prioridad setPrioridad(Prioridad prioridad) {return prioridad;}
+    public void setPrioridad(Prioridad prioridad) {this.prioridad = prioridad;}
 
 
     public abstract void mostrarElemento();
