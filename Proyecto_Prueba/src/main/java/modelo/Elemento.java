@@ -34,4 +34,7 @@ public abstract class Elemento {
         System.out.println("Prioridad: " + prioridad);
     }
 
+
+    // Este método recibe otro elemento para comparar
+    public abstract boolean verificarDuplicados(Elemento e);
 }

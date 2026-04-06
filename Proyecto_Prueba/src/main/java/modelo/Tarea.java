@@ -23,4 +23,14 @@ public class Tarea extends Elemento {
         System.out.println("Categoria: " + categoria);
         System.out.println("---------------------------");
     }
-}
+
+    @Override
+    public boolean verificarDuplicados(Elemento e) {
+        if (e instanceof Tarea) {   //e es una instancia de la clase Tarea
+            Tarea t = (Tarea) e;
+
+            return this.titulo.equalsIgnoreCase(t.titulo) &&
+                    this.descripcion.equalsIgnoreCase(t.descripcion);
+        }
+        return false;
+    }}
