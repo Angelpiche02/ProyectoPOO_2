@@ -16,12 +16,6 @@ public class Tarea extends Elemento {
         this.categoria = categoria;
     }
 
-    public void setEstado(Estado estado){this.estado = estado;}
-    public void setCategoria(String categoria) {this.categoria = categoria;}
-
-    public Estado getEstado() {return estado;}
-    public String getCategoria() {return categoria;}
-
     @Override
     public void mostrarElemento() {
         super.mostrarElemento(); // Muestra lo de Elemento

@@ -15,7 +15,6 @@ public class Recordatorio extends Elemento {
     }
 
 
-    public LocalDate getFecha() { return fecha; }
     public void setFecha(LocalDate fecha) { this.fecha = fecha; }
 
     public boolean isAlertaActiva() { return alertaActiva; }

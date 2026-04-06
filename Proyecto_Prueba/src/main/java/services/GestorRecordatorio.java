@@ -107,7 +107,7 @@ public class GestorRecordatorio
 
     public void modificarRecordatorio(int id, String nuevotitulo, String nuevadescripcion, Prioridad nuevaPrioridad , LocalDate nuevaFecha)
     {
-        if (recordatorios == null || recordatorios.isEmpty()) {
+        if (recordatorios.isEmpty()) {
             System.out.println("No hay recordatorios para modificar");
             return;
         }

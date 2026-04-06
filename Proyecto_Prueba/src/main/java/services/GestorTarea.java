@@ -69,7 +69,7 @@ public class GestorTarea
 
     public void modificarTarea(int id,String nuevotitulo,String nuevadescripcion,Prioridad nuevaPrioridad)
     {
-        if (tareas == null || tareas.isEmpty()) {
+        if (tareas.isEmpty()) {
             System.out.println("No hay tareas para modificar");
             return;
         }
@@ -82,6 +82,23 @@ public class GestorTarea
                 t.setDescripcion(nuevadescripcion);
                 t.setNivelPrioridad(nuevaPrioridad);
                 System.out.println("Tarea modificada con éxito");
+                return;
+            }
+        }
+
+        System.out.println("Tarea no encontrada");
+    }
+
+    public void borrarTarea(int id) {
+        if (tareas.isEmpty()) {
+            System.out.println("No hay tareas para borrar");
+            return;
+        }
+
+        for (Tarea t : tareas) {
+            if (t.getId() == id) {
+                tareas.remove(t);
+                System.out.println("Tarea borrada con éxito");
                 return;
             }
         }
