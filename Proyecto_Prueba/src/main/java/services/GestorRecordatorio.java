@@ -1,5 +1,9 @@
 package services;
+import modelo.Prioridad;
 import modelo.Recordatorio;
+import modelo.Tarea;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,5 +104,29 @@ public class GestorRecordatorio
             System.out.println("No se encontró ningún recordatorio con: " + texto);
         }
     }
+
+    public void modificarRecordatorio(int id, String nuevotitulo, String nuevadescripcion, Prioridad nuevaPrioridad , LocalDate nuevaFecha)
+    {
+        if (recordatorios.isEmpty()) {
+            System.out.println("No hay recordatorios para modificar");
+            return;
+        }
+
+        for (Recordatorio r: recordatorios) {
+
+            if (r.getId() == id) {
+
+                r.setTitulo(nuevotitulo);
+                r.setDescripcion(nuevadescripcion);
+                r.setNivelPrioridad(nuevaPrioridad);
+                r.setFecha(nuevaFecha);
+                System.out.println("Recordatorio modificado con éxito");
+                return;
+            }
+        }
+
+        System.out.println("Recordatorio no encontrado");
+    }
+
 
 }

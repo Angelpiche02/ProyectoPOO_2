@@ -1,4 +1,5 @@
 package services;
+import modelo.Prioridad;
 import modelo.Tarea;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,45 @@ public class GestorTarea
         if (!encontrada) {
             System.out.println("No se encontró ninguna tarea.");
         }
+    }
+
+    public void modificarTarea(int id,String nuevotitulo,String nuevadescripcion,Prioridad nuevaPrioridad)
+    {
+        if (tareas.isEmpty()) {
+            System.out.println("No hay tareas para modificar");
+            return;
+        }
+
+        for (Tarea t: tareas) {
+
+            if (t.getId() == id) {
+
+                t.setTitulo(nuevotitulo);
+                t.setDescripcion(nuevadescripcion);
+                t.setNivelPrioridad(nuevaPrioridad);
+                System.out.println("Tarea modificada con éxito");
+                return;
+            }
+        }
+
+        System.out.println("Tarea no encontrada");
+    }
+
+    public void borrarTarea(int id) {
+        if (tareas.isEmpty()) {
+            System.out.println("No hay tareas para borrar");
+            return;
+        }
+
+        for (Tarea t : tareas) {
+            if (t.getId() == id) {
+                tareas.remove(t);
+                System.out.println("Tarea borrada con éxito");
+                return;
+            }
+        }
+
+        System.out.println("Tarea no encontrada");
     }
 
 }

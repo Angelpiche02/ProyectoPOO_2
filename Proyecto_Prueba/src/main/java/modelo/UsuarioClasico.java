@@ -2,8 +2,8 @@ package modelo;
 
 public class UsuarioClasico extends Usuario
 {
-    public UsuarioClasico(int id, String nombre, String correo, String contrasena, boolean membresia) {
-        super(id, nombre, correo, contrasena, membresia);
+    public UsuarioClasico(int id, String nombre, String correo, String contrasena) {
+        super(id, nombre, correo, contrasena);
     }
 
     @Override

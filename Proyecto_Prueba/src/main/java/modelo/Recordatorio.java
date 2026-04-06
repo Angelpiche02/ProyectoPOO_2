@@ -8,14 +8,13 @@ public class Recordatorio extends Elemento {
 
     public Recordatorio() {}
 
-    public Recordatorio(int id, String titulo, TipoElemento tipo, String descripcion, String nivelPrioridad, LocalDate fecha)
+    public Recordatorio(int id, String titulo, TipoElemento tipo, String descripcion, Prioridad prioridad, LocalDate fecha)
     {
-        super(id, titulo, tipo, descripcion, nivelPrioridad);
+        super(id, titulo, tipo, descripcion, prioridad);
         this.fecha = fecha;
     }
 
 
-    public LocalDate getFecha() { return fecha; }
     public void setFecha(LocalDate fecha) { this.fecha = fecha; }
 
     public boolean isAlertaActiva() { return alertaActiva; }

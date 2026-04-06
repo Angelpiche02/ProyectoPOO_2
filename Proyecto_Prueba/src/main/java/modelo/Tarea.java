@@ -9,18 +9,12 @@ public class Tarea extends Elemento {
     public Tarea() {}
 
     public Tarea(int id, String titulo, TipoElemento tipo, String descripcion,
-                 String nivelPrioridad, Estado estado, String categoria) {
+                 Prioridad prioridad, Estado estado, String categoria) {
 
-        super(id, titulo, tipo, descripcion, nivelPrioridad);
+        super(id, titulo, tipo, descripcion, prioridad);
         this.estado = estado;
         this.categoria = categoria;
     }
-
-    public void setEstado(Estado estado){this.estado = estado;}
-    public void setCategoria(String categoria) {this.categoria = categoria;}
-
-    public String getEstado() {return estado;}
-    public String getCategoria() {return categoria;}
 
     @Override
     public void mostrarElemento() {

@@ -21,16 +21,8 @@ public abstract class Elemento {
 
     public int getId() {return id;}
     public String getTitulo() {return titulo;}
-    public TipoElemento getTipo() {return tipo;}
-    public String getDescripcion() {return descripcion;}
-    public String getPrioridad() {return prioridad;}
-
-
-    public void setId(int id) {this.id = id;}
     public void setTitulo(String titulo) {this.titulo = titulo;}
-    public void setTipo(TipoElemento tipo) {this.tipo = tipo;}
     public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
-    public void setPrioridad(Prioridad prioridad){this.prioridad = prioridad;}
 
 
     public void mostrarElemento() {
