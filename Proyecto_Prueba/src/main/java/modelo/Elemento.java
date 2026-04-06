@@ -18,9 +18,10 @@ public abstract class Elemento {
         this.prioridad = prioridad;
     }
 
-
+    public String getDescripcion(){ return descripcion;}
     public int getId() {return id;}
     public String getTitulo() {return titulo;}
+
     public void setTitulo(String titulo) {this.titulo = titulo;}
     public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
     public Prioridad setPrioridad(Prioridad prioridad) {return prioridad;}
@@ -30,9 +31,9 @@ public abstract class Elemento {
 
     public void mostrarBase(){
         System.out.println("ID: " + id);
-        System.out.println("Título: " + titulo);
+        System.out.println("Titulo: " + titulo);
         System.out.println("Tipo: " + tipo);
-        System.out.println("Descripción: " + descripcion);
+        System.out.println("Descripcion: " + descripcion);
         System.out.println("Prioridad: " + prioridad);
 
     }

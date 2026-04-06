@@ -49,7 +49,7 @@ public class GestorRecordatorio
     public void borrarRecordatorio(String tituloABorrar) {
 
         if (recordatorios.isEmpty()) {
-            System.out.println("La lista está vacía, nada que borrar.");
+            System.out.println("La lista está vacia, nada que borrar.");
             return;
         }
 
@@ -75,7 +75,7 @@ public class GestorRecordatorio
             recordatorios.remove(recordatorioAEliminar);
             System.out.println("Recordatorio '" + tituloABorrar + "' eliminado.");
         } else {
-            System.out.println("No se encontró el recordatorio: " + tituloABorrar);
+            System.out.println("No se encontro el recordatorio: " + tituloABorrar);
         }
     }
 
@@ -101,7 +101,7 @@ public class GestorRecordatorio
 
                 // Comparación sencilla y legible
                 if (tituloActual.equals(textoBusqueda)) {
-                    System.out.println("¡Recordatorio encontrado!");
+                    System.out.println("Recordatorio encontrado!");
                     r.mostrarElemento();
                     encontrado = true;
                 }
@@ -109,7 +109,7 @@ public class GestorRecordatorio
         }
 
         if (!encontrado) {
-            System.out.println("No se encontró ningún recordatorio con: " + texto);
+            System.out.println("No se encontro ningun recordatorio con: " + texto);
         }
     }
 
