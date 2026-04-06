@@ -10,8 +10,8 @@ public abstract class Usuario
         private String correo;
         private String contrasena;
 
-        protected GestorTarea gestorTarea;
-        protected GestorRecordatorio gestorRecordatorio;
+        public GestorTarea gestorTarea;
+        public GestorRecordatorio gestorRecordatorio;
 
         public Usuario(int id, String nombre, String correo, String contrasena)
         {
@@ -22,6 +22,9 @@ public abstract class Usuario
             this.gestorTarea = new GestorTarea();
             this.gestorRecordatorio = new GestorRecordatorio();
         }
+
+        public String getNombre(){ return nombre;}
+        public void setNombre(){this.nombre = nombre;}
 
         public String getCorreo() { return correo; }
         public void setCorreo(String correo) { this.correo = correo; }

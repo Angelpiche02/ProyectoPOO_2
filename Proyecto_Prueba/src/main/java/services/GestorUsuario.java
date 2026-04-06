@@ -12,7 +12,7 @@ public class GestorUsuario
     // Agregar un usuario
     public void crearUsuario(Usuario u) {
         usuarios.add(u);
-        System.out.println("Usuario registrado con éxito");
+        System.out.println("Usuario registrado con exito");
     }
 
     public Usuario autenticar(String correo, String contrasena)
@@ -21,7 +21,7 @@ public class GestorUsuario
         {
             if (u.getCorreo().equals(correo) && u.getContrasena().equals(contrasena))
             {
-                System.out.println("Autenticación exitosa");
+                System.out.println("Autenticacion exitosa");
                 return u;
             }
         }
@@ -38,7 +38,7 @@ public class GestorUsuario
             if(u.getCorreo().equals(correo))
             {
                 u.setContrasena(nuevaContrasena);
-                System.out.println("Cambio de contraseña exitoso");
+                System.out.println("Cambio de contrasena exitoso");
                 return;
             }
 

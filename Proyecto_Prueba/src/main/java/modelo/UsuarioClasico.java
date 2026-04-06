@@ -11,7 +11,7 @@ public class UsuarioClasico extends Usuario
     {
         if(gestorTarea.getCantidadTareas()>= 5)
         {
-            System.out.println("Alcazaste el limite de tareas");
+            System.out.println("Alcanzaste el limite de tareas");
         }else
         {
             gestorTarea.agregarTarea(t);

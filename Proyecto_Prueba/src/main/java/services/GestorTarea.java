@@ -14,9 +14,17 @@ public class GestorTarea
     }
 
     // Agregar tarea
-    public void agregarTarea(Tarea t) {
-        tareas.add(t);
-        System.out.println("Tarea agregada con éxito");
+    public void agregarTarea(Tarea nueva) {
+
+        for (Tarea t : tareas) {
+            if (t.verificarDuplicados(nueva)) {
+                System.out.println("Tarea duplicada");
+                return;
+            }
+        }
+
+        tareas.add(nueva);
+        System.out.println("Tarea agregada con exito");
     }
 
     // Mostrar todas las tareas
@@ -56,14 +64,14 @@ public class GestorTarea
             if (t.getTitulo() != null &&
                     t.getTitulo().toLowerCase().contains(texto.toLowerCase())) {
 
-                System.out.println("¡Tarea encontrada!");
+                System.out.println("Tarea encontrada!");
                 t.mostrarElemento();
                 encontrada = true;
             }
         }
 
         if (!encontrada) {
-            System.out.println("No se encontró ninguna tarea.");
+            System.out.println("No se encontro ninguna tarea.");
         }
     }
 
@@ -81,7 +89,7 @@ public class GestorTarea
                 t.setTitulo(nuevotitulo);
                 t.setDescripcion(nuevadescripcion);
                 t.setPrioridad(nuevaPrioridad);
-                System.out.println("Tarea modificada con éxito");
+                System.out.println("Tarea modificada con exito");
                 return;
             }
         }
@@ -98,7 +106,7 @@ public class GestorTarea
         for (Tarea t : tareas) {
             if (t.getId() == id) {
                 tareas.remove(t);
-                System.out.println("Tarea borrada con éxito");
+                System.out.println("Tarea borrada con exito");
                 return;
             }
         }

@@ -6,7 +6,8 @@ public class Tarea extends Elemento {
     private Estado estado;
     private String categoria;
 
-    public Tarea() {}
+    public Tarea() {
+    }
 
     public Tarea(int id, String titulo, TipoElemento tipo, String descripcion,
                  Prioridad prioridad, Estado estado, String categoria) {
@@ -18,9 +19,22 @@ public class Tarea extends Elemento {
 
     @Override
     public void mostrarElemento() {
-        super.mostrarElemento(); // Muestra lo de Elemento
+        mostrarBase(); // Muestra lo de Elemento
         System.out.println("Estado: " + estado);
         System.out.println("Categoria: " + categoria);
         System.out.println("---------------------------");
+    }
+
+    @Override
+    public boolean verificarDuplicados(Elemento e) {
+
+        Tarea t = (Tarea) e;
+
+        if (this.getTitulo().equalsIgnoreCase(t.getTitulo()) &&
+                this.getDescripcion().equalsIgnoreCase(t.getDescripcion())) {
+            return true;
+        }
+
+        return false;
     }
 }

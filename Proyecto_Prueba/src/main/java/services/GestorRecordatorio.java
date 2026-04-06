@@ -17,9 +17,17 @@ public class GestorRecordatorio
     }
 
     // Agregar recordatorio
-    public void agregarRecordatorio(Recordatorio r) {
-        recordatorios.add(r);
-        System.out.println("Recordatorio agregado con éxito");
+    public void agregarRecordatorio(Recordatorio nuevo) {
+
+        for (Recordatorio r : recordatorios) {
+            if (r.verificarDuplicados(nuevo)) {
+                System.out.println("Recordatorio duplicado");
+                return;
+            }
+        }
+
+        recordatorios.add(nuevo);
+        System.out.println("Recordatorio agregado con exito");
     }
 
     // Mostrar todos los recordatorios
@@ -41,7 +49,7 @@ public class GestorRecordatorio
     public void borrarRecordatorio(String tituloABorrar) {
 
         if (recordatorios.isEmpty()) {
-            System.out.println("La lista está vacía, nada que borrar.");
+            System.out.println("La lista está vacia, nada que borrar.");
             return;
         }
 
@@ -67,7 +75,7 @@ public class GestorRecordatorio
             recordatorios.remove(recordatorioAEliminar);
             System.out.println("Recordatorio '" + tituloABorrar + "' eliminado.");
         } else {
-            System.out.println("No se encontró el recordatorio: " + tituloABorrar);
+            System.out.println("No se encontro el recordatorio: " + tituloABorrar);
         }
     }
 
@@ -93,7 +101,7 @@ public class GestorRecordatorio
 
                 // Comparación sencilla y legible
                 if (tituloActual.equals(textoBusqueda)) {
-                    System.out.println("¡Recordatorio encontrado!");
+                    System.out.println("Recordatorio encontrado!");
                     r.mostrarElemento();
                     encontrado = true;
                 }
@@ -101,7 +109,7 @@ public class GestorRecordatorio
         }
 
         if (!encontrado) {
-            System.out.println("No se encontró ningún recordatorio con: " + texto);
+            System.out.println("No se encontro ningun recordatorio con: " + texto);
         }
     }
 
@@ -120,7 +128,7 @@ public class GestorRecordatorio
                 r.setDescripcion(nuevadescripcion);
                 r.setPrioridad(nuevaPrioridad);
                 r.setFecha(nuevaFecha);
-                System.out.println("Recordatorio modificado con éxito");
+                System.out.println("Recordatorio modificado con exito");
                 return;
             }
         }
