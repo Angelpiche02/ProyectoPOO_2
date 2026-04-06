@@ -1,4 +1,5 @@
 package services;
+import modelo.Prioridad;
 import modelo.Tarea;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,23 @@ public class GestorTarea
         if (!encontrada) {
             System.out.println("No se encontró ninguna tarea.");
         }
+    }
+
+    public void modificarTarea(int id,String nuevotitulo,String nuevadescripcion,String nuevoNivelPrioridad)
+    {
+        for (Tarea t: tareas) {
+
+            if (t.getId() == id) {
+
+                t.setTitulo(nuevotitulo);
+                t.setDescripcion(nuevadescripcion);
+                t.setNivelPrioridad(nuevoNivelPrioridad);
+                System.out.println("Elemento modificado con éxito");
+                return;
+            }
+        }
+
+        System.out.println("Elemento no encontrado");
     }
 
 }

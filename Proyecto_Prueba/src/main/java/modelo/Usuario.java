@@ -5,7 +5,6 @@ import services.GestorRecordatorio;
 public abstract class Usuario
 
     {
-
         private int id;
         private String nombre;
         private String correo;
