@@ -26,14 +26,16 @@ public abstract class Elemento {
     public Prioridad setPrioridad(Prioridad prioridad) {return prioridad;}
 
 
-    public void mostrarElemento() {
+    public abstract void mostrarElemento();
+
+    public void mostrarBase(){
         System.out.println("ID: " + id);
         System.out.println("Título: " + titulo);
         System.out.println("Tipo: " + tipo);
         System.out.println("Descripción: " + descripcion);
         System.out.println("Prioridad: " + prioridad);
-    }
 
+    }
 
     // Este método recibe otro elemento para comparar
     public abstract boolean verificarDuplicados(Elemento e);

@@ -22,7 +22,7 @@ public class Recordatorio extends Elemento {
 
     @Override
     public void mostrarElemento() {
-        super.mostrarElemento();
+        mostrarBase();
         System.out.println("Fecha: " + fecha);
         System.out.println("Alerta activa: " + alertaActiva);
         System.out.println("---------------------------");

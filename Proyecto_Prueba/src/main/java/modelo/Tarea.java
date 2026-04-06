@@ -18,7 +18,7 @@ public class Tarea extends Elemento {
 
     @Override
     public void mostrarElemento() {
-        super.mostrarElemento(); // Muestra lo de Elemento
+        mostrarBase(); // Muestra lo de Elemento
         System.out.println("Estado: " + estado);
         System.out.println("Categoria: " + categoria);
         System.out.println("---------------------------");
