@@ -26,11 +26,21 @@ public class Tarea extends Elemento {
 
     @Override
     public boolean verificarDuplicados(Elemento e) {
-        if (e instanceof Tarea) {   //e es una instancia de la clase Tarea
-            Tarea t = (Tarea) e;
 
-            return this.titulo.equalsIgnoreCase(t.titulo) &&
-                    this.descripcion.equalsIgnoreCase(t.descripcion);
+        // Ver si son de la misma clase
+        if (this.getClass() != e.getClass()) {
+            return false;
         }
+
+        // Convertir
+        Tarea t = (Tarea) e;
+
+        // Comparacion
+        if (this.titulo.equalsIgnoreCase(t.titulo) &&
+                this.descripcion.equalsIgnoreCase(t.descripcion)) {
+
+            return true;
+        }
+
         return false;
-    }}
+    }

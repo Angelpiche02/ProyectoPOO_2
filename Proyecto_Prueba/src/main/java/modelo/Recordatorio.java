@@ -30,12 +30,19 @@ public class Recordatorio extends Elemento {
 
     @Override
     public boolean verificarDuplicados(Elemento e) {
-        if (e instanceof Recordatorio) {
-            Recordatorio r = (Recordatorio) e;
 
-            return this.titulo.equalsIgnoreCase(r.titulo) &&
-                    this.fecha.equals(r.fecha);
+        if (this.getClass() != e.getClass()) {
+            return false;
         }
+
+        Recordatorio r = (Recordatorio) e;
+
+        if (this.titulo.equalsIgnoreCase(r.titulo) &&
+                this.fecha.equals(r.fecha)) {
+
+            return true;
+        }
+
         return false;
     }
 }
