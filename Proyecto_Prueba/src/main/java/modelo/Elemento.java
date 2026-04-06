@@ -43,7 +43,8 @@ public abstract class Elemento {
     }
 
 
-    // Metodo para
+    // Metodo para verificar duplicidad
+
 
 }
 

@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c94f8d7f-6b6c-4853-bbe9-5f93af30a42f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/UsuarioClasico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/services/GestorRecordatorio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/services/GestorTarea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/services/GestorUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Prueba/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Prueba/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/Elemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/Elemento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/Recordatorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/Recordatorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/Tarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/Tarea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/UsuarioPremium.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Prueba/src/main/java/modelo/UsuarioPremium.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +55,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging feature/verificarDuplicados",
+    "git-widget-placeholder": "feature/verificarDuplicados",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
