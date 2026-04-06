@@ -17,7 +17,7 @@ public class Main {
         // -----------------------
         // Crear Usuario Premium con login
         // -----------------------
-        UsuarioPremiumConLogin usuarioPremium = new UsuarioPremiumConLogin(2, "Ana Lopez", "ana@mail.com", "abcd", true);
+        UsuarioPremiumusuarioPremium = new UsuarioPremiumConLogin(2, "Ana Lopez", "ana@mail.com", "abcd", true);
         gestorUsuario.crearUsuario(usuarioPremium);
 
         // -----------------------
