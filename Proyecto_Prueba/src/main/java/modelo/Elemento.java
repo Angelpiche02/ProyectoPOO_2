@@ -41,4 +41,5 @@ public abstract class Elemento {
         System.out.println("Descripción: " + descripcion);
         System.out.println("Prioridad: " + nivelPrioridad);
     }
+
 }
