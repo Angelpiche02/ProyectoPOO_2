@@ -3,20 +3,20 @@ package modelo;
 
 public class Tarea extends Elemento {
 
-    private String estado;
+    private Estado estado;
     private String categoria;
 
     public Tarea() {}
 
     public Tarea(int id, String titulo, TipoElemento tipo, String descripcion,
-                 String nivelPrioridad, String estado, String categoria) {
+                 String nivelPrioridad, Estado estado, String categoria) {
 
         super(id, titulo, tipo, descripcion, nivelPrioridad);
         this.estado = estado;
         this.categoria = categoria;
     }
 
-    public void setEstado(String estado){this.estado = estado;}
+    public void setEstado(Estado estado){this.estado = estado;}
     public void setCategoria(String categoria) {this.categoria = categoria;}
 
     public String getEstado() {return estado;}
