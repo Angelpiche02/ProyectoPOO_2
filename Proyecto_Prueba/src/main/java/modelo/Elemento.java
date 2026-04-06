@@ -23,7 +23,7 @@ public abstract class Elemento {
     public String getTitulo() {return titulo;}
     public TipoElemento getTipo() {return tipo;}
     public String getDescripcion() {return descripcion;}
-    public String getPrioridad() {return prioridad;}
+    public Prioridad getPrioridad() {return prioridad;}
 
 
     public void setId(int id) {this.id = id;}

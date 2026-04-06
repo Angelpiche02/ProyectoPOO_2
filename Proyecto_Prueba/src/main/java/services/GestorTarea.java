@@ -67,21 +67,26 @@ public class GestorTarea
         }
     }
 
-    public void modificarTarea(int id,String nuevotitulo,String nuevadescripcion,String nuevoNivelPrioridad)
+    public void modificarTarea(int id,String nuevotitulo,String nuevadescripcion,Prioridad nuevaPrioridad)
     {
+        if (tareas == null || tareas.isEmpty()) {
+            System.out.println("No hay tareas para modificar");
+            return;
+        }
+
         for (Tarea t: tareas) {
 
             if (t.getId() == id) {
 
                 t.setTitulo(nuevotitulo);
                 t.setDescripcion(nuevadescripcion);
-                t.setNivelPrioridad(nuevoNivelPrioridad);
-                System.out.println("Elemento modificado con éxito");
+                t.setNivelPrioridad(nuevaPrioridad);
+                System.out.println("Tarea modificada con éxito");
                 return;
             }
         }
 
-        System.out.println("Elemento no encontrado");
+        System.out.println("Tarea no encontrada");
     }
 
 }
