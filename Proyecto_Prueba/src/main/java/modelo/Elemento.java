@@ -1,5 +1,4 @@
 package modelo;
-import modelo.TipoElemento;
 
 public abstract class Elemento {
 
@@ -7,16 +6,16 @@ public abstract class Elemento {
     private String titulo;
     private TipoElemento tipo;
     private String descripcion;
-    private String nivelPrioridad;
+    private Prioridad prioridad;
 
     public Elemento() {}
 
-    public Elemento(int id, String titulo, TipoElemento tipo, String descripcion, String nivelPrioridad) {
+    public Elemento(int id, String titulo, TipoElemento tipo, String descripcion, Prioridad prioridad) {
         this.id = id;
         this.titulo = titulo;
         this.tipo = tipo;
         this.descripcion = descripcion;
-        this.nivelPrioridad = nivelPrioridad;
+        this.prioridad = prioridad;
     }
 
 
@@ -24,14 +23,14 @@ public abstract class Elemento {
     public String getTitulo() {return titulo;}
     public TipoElemento getTipo() {return tipo;}
     public String getDescripcion() {return descripcion;}
-    public String getNivelPrioridad() {return nivelPrioridad;}
+    public String getPrioridad() {return prioridad;}
 
 
     public void setId(int id) {this.id = id;}
     public void setTitulo(String titulo) {this.titulo = titulo;}
     public void setTipo(TipoElemento tipo) {this.tipo = tipo;}
     public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
-    public void setNivelPrioridad(String nivelPrioridad){this.nivelPrioridad = nivelPrioridad;}
+    public void setPrioridad(Prioridad prioridad){this.prioridad = prioridad;}
 
 
     public void mostrarElemento() {
@@ -39,7 +38,7 @@ public abstract class Elemento {
         System.out.println("Título: " + titulo);
         System.out.println("Tipo: " + tipo);
         System.out.println("Descripción: " + descripcion);
-        System.out.println("Prioridad: " + nivelPrioridad);
+        System.out.println("Prioridad: " + prioridad);
     }
 
 }
