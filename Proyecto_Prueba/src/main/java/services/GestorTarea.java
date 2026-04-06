@@ -80,7 +80,7 @@ public class GestorTarea
 
                 t.setTitulo(nuevotitulo);
                 t.setDescripcion(nuevadescripcion);
-                t.setNivelPrioridad(nuevaPrioridad);
+                t.setPrioridad(nuevaPrioridad);
                 System.out.println("Tarea modificada con éxito");
                 return;
             }

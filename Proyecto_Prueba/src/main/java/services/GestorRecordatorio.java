@@ -118,7 +118,7 @@ public class GestorRecordatorio
 
                 r.setTitulo(nuevotitulo);
                 r.setDescripcion(nuevadescripcion);
-                r.setNivelPrioridad(nuevaPrioridad);
+                r.setPrioridad(nuevaPrioridad);
                 r.setFecha(nuevaFecha);
                 System.out.println("Recordatorio modificado con éxito");
                 return;

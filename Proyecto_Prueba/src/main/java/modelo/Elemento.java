@@ -23,6 +23,7 @@ public abstract class Elemento {
     public String getTitulo() {return titulo;}
     public void setTitulo(String titulo) {this.titulo = titulo;}
     public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
+    public Prioridad setPrioridad(Prioridad prioridad) {return prioridad;}
 
 
     public void mostrarElemento() {
