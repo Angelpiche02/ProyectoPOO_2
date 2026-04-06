@@ -42,8 +42,8 @@ public abstract class Usuario
 
         public abstract void crearTarea(Tarea t);
 
-        public abstract void compartirTarea(Tarea t, Usuario otroUsuario);
-        
+        public abstract void compartirTarea(Tarea t, Usuario Usuario2);
+
         public void crearRecordatorio(Recordatorio r)
         {
             gestorRecordatorio.agregarRecordatorio(r);
