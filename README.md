@@ -1,5 +1,3 @@
----
-
 # 📝 Sistema de Gestión de Tareas Colaborativas
 
 **Proyecto de Programación Orientada a Objetos – 
